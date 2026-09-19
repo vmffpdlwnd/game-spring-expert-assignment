@@ -19,8 +19,8 @@ public class WorldChatController {
 
     private final RecentChatQueryService chatService;
 
-    // Lv 6: GET /world/{worldID}/chats 매핑, limit 기본값 50
-    @GetMapping("/world/{worldID}/chats")
+    // Lv 6: GET /worlds/{worldID}/chats 매핑, limit 기본값 50
+    @GetMapping("/worlds/{worldId}/chats")
     public ResponseEntity<List<ChatMessageResponse>> chats(
             @PathVariable Long worldId,
             @RequestParam(defaultValue = "50") int limit, @PathVariable String worldID) {
